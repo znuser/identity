@@ -14,8 +14,8 @@
   },
   "autoload": {
     "psr-4": {
-      "ZnUser\\Ientity\\": "src",
-      "ZnUser\\Ientity\\Tests\\": "tests"
+      "ZnUser\\Identity\\": "src",
+      "ZnUser\\Identity\\Tests\\": "tests"
     }
   }
 }
