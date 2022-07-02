@@ -32,6 +32,7 @@ class Bundle extends BaseBundle
     {
         return [
             __DIR__ . '/Domain/config/container.php',
+            __DIR__ . '/Domain/config/container-script.php',
         ];
     }
 }
