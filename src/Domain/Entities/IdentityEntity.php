@@ -5,6 +5,7 @@ namespace ZnUser\Identity\Domain\Entities;
 use Illuminate\Support\Collection;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
+use ZnCore\Contract\User\Interfaces\Entities\PersonEntityInterface;
 use ZnCore\Domain\Entity\Helpers\CollectionHelper;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
 use ZnLib\Components\Status\Enums\StatusEnum;
@@ -23,6 +24,7 @@ class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface
     protected $updatedAt = null;
     protected $roles = [];
     protected $assignments = null;
+    protected $person = null;
 
     public function __construct()
     {
@@ -75,7 +77,7 @@ class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface
         $this->updatedAt = $updatedAt;
     }
 
-    public function getUsername()
+    public function getUsername(): string
     {
         return $this->username;
     }
@@ -105,6 +107,16 @@ class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface
         if($assignments) {
             $this->roles = CollectionHelper::getColumn($assignments, 'itemName');
         }
+    }
+
+    public function getPerson(): ?PersonEntityInterface
+    {
+        return $this->person;
+    }
+
+    public function setPerson(?PersonEntityInterface $person): void
+    {
+        $this->person = $person;
     }
 
     public function getPassword()
