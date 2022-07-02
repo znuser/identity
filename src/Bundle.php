@@ -10,7 +10,7 @@ class Bundle extends BaseBundle
     public function deps(): array
     {
         return [
-            new \ZnBundle\User\Bundle(['all']),
+//            new \ZnBundle\User\Bundle(['all']),
             new \ZnUser\Authentication\Bundle(['all']),
             new \ZnUser\Confirm\Bundle(['all']),
         ];
