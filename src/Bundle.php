@@ -12,6 +12,7 @@ class Bundle extends BaseBundle
         return [
             new \ZnBundle\User\Bundle(['all']),
             new \ZnUser\Authentication\Bundle(['all']),
+            new \ZnUser\Confirm\Bundle(['all']),
         ];
     }
 
