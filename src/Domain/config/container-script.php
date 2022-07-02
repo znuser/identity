@@ -1,9 +1,11 @@
 <?php
 
 use Psr\Container\ContainerInterface;
-use ZnBundle\User\Domain\Interfaces\Services\AuthServiceInterface;
-use ZnBundle\User\Domain\Services\AuthService3;
-use ZnBundle\User\Domain\Subscribers\SymfonyAuthenticationIdentitySubscriber;
+use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
+use ZnUser\Authentication\Domain\Services\AuthService3;
+use ZnUser\Authentication\Domain\Subscribers\SymfonyAuthenticationIdentitySubscriber;
+
+\ZnCore\Base\Develop\Helpers\DeprecateHelper::hardThrow();
 
 return [
     'singletons' => [
@@ -12,7 +14,7 @@ return [
             $authService = $container->get(AuthService3::class);
             $authService->addSubscriber(SymfonyAuthenticationIdentitySubscriber::class);
             $authService->addSubscriber([
-                'class' => \ZnBundle\User\Domain\Subscribers\AuthenticationAttemptSubscriber::class,
+                'class' => \ZnUser\Authentication\Domain\Subscribers\AuthenticationAttemptSubscriber::class,
                 'action' => 'authorization',
                 // todo: вынести в настройки
                 'attemptCount' => 3,

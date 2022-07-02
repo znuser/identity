@@ -3,7 +3,7 @@
 namespace ZnUser\Identity\Domain\Services;
 
 use Symfony\Component\PasswordHasher\PasswordHasherInterface;
-use ZnBundle\User\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
+use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
 use ZnUser\Identity\Domain\Interfaces\Repositories\IdentityRepositoryInterface;
 use ZnUser\Identity\Domain\Interfaces\Services\IdentityServiceInterface;
 use ZnCore\Domain\Service\Base\BaseCrudService;

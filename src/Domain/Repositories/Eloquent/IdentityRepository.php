@@ -4,7 +4,7 @@ namespace ZnUser\Identity\Domain\Repositories\Eloquent;
 
 use App\Organization\Domain\Interfaces\Repositories\LanguageRepositoryInterface;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
-use ZnBundle\User\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
+use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
 use ZnUser\Identity\Domain\Interfaces\Repositories\IdentityRepositoryInterface;
 use ZnUser\Identity\Domain\Relations\IdentityRelation;
 use ZnCore\Domain\EntityManager\Interfaces\EntityManagerInterface;

@@ -2,7 +2,7 @@
 
 namespace ZnUser\Identity\Domain\Relations;
 
-use ZnBundle\User\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
+use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInterface;
 use ZnCore\Domain\Relation\Libs\Types\OneToManyRelation;
 use ZnCore\Domain\Relation\Libs\Types\OneToOneRelation;
 use ZnUser\Rbac\Domain\Interfaces\Repositories\AssignmentRepositoryInterface;
