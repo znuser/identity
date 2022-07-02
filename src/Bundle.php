@@ -14,6 +14,20 @@ class Bundle extends BaseBundle
         ];
     }
 
+    public function symfonyRpc(): array
+    {
+        return [
+            __DIR__ . '/Rpc/config/identity-routes.php',
+        ];
+    }
+
+    public function migration(): array
+    {
+        return [
+            '/vendor/znuser/identity/src/Domain/Migrations',
+        ];
+    }
+
     public function container(): array
     {
         return [
