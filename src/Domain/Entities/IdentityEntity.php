@@ -2,7 +2,7 @@
 
 namespace ZnUser\Identity\Domain\Entities;
 
-use Illuminate\Support\Collection;
+use ZnCore\Domain\Collection\Libs\Collection;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 use ZnCore\Contract\User\Interfaces\Entities\PersonEntityInterface;
