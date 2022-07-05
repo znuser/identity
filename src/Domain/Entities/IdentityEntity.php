@@ -2,18 +2,16 @@
 
 namespace ZnUser\Identity\Domain\Entities;
 
-use ZnCore\Domain\Collection\Interfaces\Enumerable;
-use ZnCore\Domain\Collection\Libs\Collection;
+use DateTime;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
-use ZnCore\Contract\User\Interfaces\Entities\PersonEntityInterface;
-use ZnCore\Domain\Entity\Helpers\CollectionHelper;
-use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
-use ZnLib\Components\Status\Enums\StatusEnum;
-use ZnCore\Domain\Entity\Helpers\EntityHelper;
-use ZnCore\Domain\Entity\Interfaces\EntityIdInterface;
 use ZnCore\Base\Validation\Interfaces\ValidationByMetadataInterface;
-use DateTime;
+use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
+use ZnCore\Contract\User\Interfaces\Entities\PersonEntityInterface;
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
+use ZnCore\Domain\Entity\Helpers\CollectionHelper;
+use ZnCore\Domain\Entity\Interfaces\EntityIdInterface;
+use ZnLib\Components\Status\Enums\StatusEnum;
 
 class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface, IdentityEntityInterface, UserInterface
 {
@@ -87,6 +85,7 @@ class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface
     {
         $this->username = $username;
     }
+
     public function getRoles()
     {
         return $this->roles;
@@ -105,7 +104,7 @@ class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface
     public function setAssignments(?Enumerable $assignments): void
     {
         $this->assignments = $assignments;
-        if($assignments) {
+        if ($assignments) {
             $this->roles = CollectionHelper::getColumn($assignments, 'itemName');
         }
     }
