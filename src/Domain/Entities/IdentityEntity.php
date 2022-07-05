@@ -2,6 +2,7 @@
 
 namespace ZnUser\Identity\Domain\Entities;
 
+use ZnCore\Domain\Collection\Interfaces\Enumerable;
 use ZnCore\Domain\Collection\Libs\Collection;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
@@ -96,12 +97,12 @@ class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface
         $this->roles = $roles;
     }
 
-    public function getAssignments(): ?Collection
+    public function getAssignments(): ?Enumerable
     {
         return $this->assignments;
     }
 
-    public function setAssignments(?Collection $assignments): void
+    public function setAssignments(?Enumerable $assignments): void
     {
         $this->assignments = $assignments;
         if($assignments) {
