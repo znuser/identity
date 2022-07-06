@@ -5,7 +5,7 @@ use ZnUser\Authentication\Domain\Interfaces\Services\AuthServiceInterface;
 use ZnUser\Authentication\Domain\Services\AuthService;
 use ZnUser\Authentication\Domain\Subscribers\SymfonyAuthenticationIdentitySubscriber;
 
-\ZnCore\Base\Develop\Helpers\DeprecateHelper::hardThrow();
+\ZnCore\Code\Helpers\DeprecateHelper::hardThrow();
 
 return [
     'singletons' => [
