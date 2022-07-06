@@ -3,7 +3,7 @@
 namespace ZnUser\Identity\Domain\Events;
 
 use Symfony\Contracts\EventDispatcher\Event;
-use ZnCore\Base\EventDispatcher\Traits\EventSkipHandleTrait;
+use ZnCore\EventDispatcher\Traits\EventSkipHandleTrait;
 
 class UserActionEvent extends Event
 {
