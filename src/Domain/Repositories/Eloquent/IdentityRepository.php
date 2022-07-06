@@ -8,12 +8,12 @@ use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInt
 use ZnUser\Identity\Domain\Interfaces\Repositories\IdentityRepositoryInterface;
 use ZnUser\Identity\Domain\Relations\IdentityRelation;
 use ZnCore\EntityManager\Interfaces\EntityManagerInterface;
-use ZnCore\Domain\Query\Entities\Query;
-use ZnCore\Domain\Relation\Libs\Types\OneToManyRelation;
-use ZnCore\Domain\Relation\Libs\Types\OneToOneRelation;
+use ZnCore\Query\Entities\Query;
+use ZnCore\Relation\Libs\Types\OneToManyRelation;
+use ZnCore\Relation\Libs\Types\OneToOneRelation;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;
 use ZnDatabase\Eloquent\Domain\Capsule\Manager;
-use ZnCore\Domain\Repository\Mappers\TimeMapper;
+use ZnCore\Repository\Mappers\TimeMapper;
 use ZnUser\Rbac\Domain\Interfaces\Repositories\AssignmentRepositoryInterface;
 use ZnUser\Rbac\Domain\Interfaces\Repositories\RoleRepositoryInterface;
 
