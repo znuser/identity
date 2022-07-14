@@ -3,7 +3,7 @@
 namespace ZnUser\Identity\Domain\Interfaces\Repositories;
 
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
-use ZnCore\Repository\Interfaces\CrudRepositoryInterface;
+use ZnDomain\Repository\Interfaces\CrudRepositoryInterface;
 use ZnCore\Query\Entities\Query;
 
 interface IdentityRepositoryInterface extends CrudRepositoryInterface
