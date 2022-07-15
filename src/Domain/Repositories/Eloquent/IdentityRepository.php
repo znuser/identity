@@ -8,7 +8,7 @@ use ZnUser\Authentication\Domain\Interfaces\Repositories\CredentialRepositoryInt
 use ZnUser\Identity\Domain\Interfaces\Repositories\IdentityRepositoryInterface;
 use ZnUser\Identity\Domain\Relations\IdentityRelation;
 use ZnDomain\EntityManager\Interfaces\EntityManagerInterface;
-use ZnCore\Query\Entities\Query;
+use ZnDomain\Query\Entities\Query;
 use ZnDomain\Relation\Libs\Types\OneToManyRelation;
 use ZnDomain\Relation\Libs\Types\OneToOneRelation;
 use ZnDatabase\Eloquent\Domain\Base\BaseEloquentCrudRepository;

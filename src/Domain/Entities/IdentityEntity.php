@@ -5,12 +5,12 @@ namespace ZnUser\Identity\Domain\Entities;
 use DateTime;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
-use ZnCore\Validation\Interfaces\ValidationByMetadataInterface;
+use ZnDomain\Validator\Interfaces\ValidationByMetadataInterface;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
 use ZnCore\Contract\User\Interfaces\Entities\PersonEntityInterface;
 use ZnCore\Collection\Interfaces\Enumerable;
-use ZnCore\Entity\Helpers\CollectionHelper;
-use ZnCore\Entity\Interfaces\EntityIdInterface;
+use ZnDomain\Entity\Helpers\CollectionHelper;
+use ZnDomain\Entity\Interfaces\EntityIdInterface;
 use ZnLib\Components\Status\Enums\StatusEnum;
 
 class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface, IdentityEntityInterface, UserInterface
