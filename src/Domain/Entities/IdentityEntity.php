@@ -5,12 +5,13 @@ namespace ZnUser\Identity\Domain\Entities;
 use DateTime;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
-use ZnDomain\Validator\Interfaces\ValidationByMetadataInterface;
+use ZnCore\Collection\Interfaces\Enumerable;
+use ZnCore\Contract\Common\Exceptions\NotImplementedMethodException;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
 use ZnCore\Contract\User\Interfaces\Entities\PersonEntityInterface;
-use ZnCore\Collection\Interfaces\Enumerable;
 use ZnDomain\Entity\Helpers\CollectionHelper;
 use ZnDomain\Entity\Interfaces\EntityIdInterface;
+use ZnDomain\Validator\Interfaces\ValidationByMetadataInterface;
 use ZnLib\Components\Status\Enums\StatusEnum;
 
 class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface, IdentityEntityInterface, UserInterface
@@ -27,8 +28,8 @@ class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface
 
     public function __construct()
     {
-        $this->createdAt = new DateTime;
-        $this->updatedAt = new DateTime;
+        $this->createdAt = new DateTime();
+        $this->updatedAt = new DateTime();
     }
 
     public static function loadValidatorMetadata(ClassMetadata $metadata)
@@ -86,6 +87,11 @@ class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface
         $this->username = $username;
     }
 
+    /*public function getUserIdentifier(): string
+    {
+        return $this->username;
+    }*/
+
     public function getRoles()
     {
         return $this->roles;
@@ -121,16 +127,16 @@ class IdentityEntity implements ValidationByMetadataInterface, EntityIdInterface
 
     public function getPassword()
     {
-        // TODO: Implement getPassword() method.
+//        throw new NotImplementedMethodException('Not Implemented Method "' . static::class . '::' . __METHOD__ . '"!');
     }
 
     public function getSalt()
     {
-        // TODO: Implement getSalt() method.
+//        throw new NotImplementedMethodException('Not Implemented Method "' . static::class . '::' . __METHOD__ . '"!');
     }
 
     public function eraseCredentials()
     {
-        // TODO: Implement eraseCredentials() method.
+//        throw new NotImplementedMethodException('Not Implemented Method "' . static::class . '::' . __METHOD__ . '"!');
     }
 }
