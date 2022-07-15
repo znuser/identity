@@ -9,7 +9,7 @@ use ZnCore\Collection\Interfaces\Enumerable;
 use ZnCore\Contract\Common\Exceptions\NotImplementedMethodException;
 use ZnCore\Contract\User\Interfaces\Entities\IdentityEntityInterface;
 use ZnCore\Contract\User\Interfaces\Entities\PersonEntityInterface;
-use ZnDomain\Entity\Helpers\CollectionHelper;
+use ZnCore\Collection\Helpers\CollectionHelper;
 use ZnDomain\Entity\Interfaces\EntityIdInterface;
 use ZnDomain\Validator\Interfaces\ValidationByMetadataInterface;
 use ZnLib\Components\Status\Enums\StatusEnum;
